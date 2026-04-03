@@ -2,9 +2,23 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{B0B26CF7-BEED-46B5-AE79-D8E4F96F2B1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyValueStorage.Api", "src\KeyValueStorage.Api\KeyValueStorage.Api.csproj", "{6AA88F34-D56F-4172-B549-374F0F73547C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyValueStorage.Core", "src\KeyValueStorage.Core\KeyValueStorage.Core.csproj", "{49FD2238-92CE-44F9-947F-418902759757}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AA88F34-D56F-4172-B549-374F0F73547C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA88F34-D56F-4172-B549-374F0F73547C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA88F34-D56F-4172-B549-374F0F73547C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA88F34-D56F-4172-B549-374F0F73547C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49FD2238-92CE-44F9-947F-418902759757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49FD2238-92CE-44F9-947F-418902759757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49FD2238-92CE-44F9-947F-418902759757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49FD2238-92CE-44F9-947F-418902759757}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
