@@ -1,8 +1,14 @@
 using System.Security.Cryptography;
 
-namespace KeyValueStorage.Core;
+namespace KeyValueStorage.Core.Services;
 
-public sealed class Repository
+public interface IRepository
+{
+	Task<Stream> ProvideData(string key);
+	Task<string> StoreData(string key, Stream dataStream);
+}
+
+public sealed class Repository : IRepository
 {
 	private readonly int _bufferSize = 4096;
 	private readonly string _storagePath = Path.Combine(Directory.GetCurrentDirectory(), "storage");
@@ -22,12 +28,15 @@ public sealed class Repository
 
 	public async Task<string> StoreData(string key, Stream dataStream)
 	{
-		// var storagePath = Path.Combine(Directory.GetCurrentDirectory(), "storage");
-		// if (!Directory.Exists(storagePath))
-		// {
-		// 	Directory.CreateDirectory(storagePath);
-		// }
+		try
+		{
 
+		}
+		catch (Exception e)
+		{
+			Console.WriteLine(e);
+			throw;
+		}
 		var filePath = Path.Combine(_storagePath, key);
 		await using var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None,
 			_bufferSize, useAsync: true);

@@ -1,3 +1,5 @@
+using KeyValueStorage.Core.Services;
+
 namespace KeyValueStorage.Api;
 
 public class Program
@@ -7,7 +9,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        builder.Services.AddScoped<KeyValueStorage.Core.Repository>();
+        builder.Services.AddScoped<Repository>();
 
         builder.Services.AddControllers();
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
