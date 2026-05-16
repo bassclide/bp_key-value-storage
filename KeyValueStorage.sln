@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyValuesStorage.Core.UnitT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyValueStorage.Api.UnitTests", "tests\KeyValueStorage.Api.UnitTests\KeyValueStorage.Api.UnitTests.csproj", "{6AFC9A8D-94AA-46D8-B179-5227C4638F5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyValueStorage.Api.IntegrationTests", "tests\KeyValueStorage.Api.IntegrationTests\KeyValueStorage.Api.IntegrationTests.csproj", "{84D44114-B09A-4DE5-A2E8-29779517E143}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,9 +36,14 @@ Global
 		{6AFC9A8D-94AA-46D8-B179-5227C4638F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AFC9A8D-94AA-46D8-B179-5227C4638F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AFC9A8D-94AA-46D8-B179-5227C4638F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D44114-B09A-4DE5-A2E8-29779517E143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D44114-B09A-4DE5-A2E8-29779517E143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D44114-B09A-4DE5-A2E8-29779517E143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D44114-B09A-4DE5-A2E8-29779517E143}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B1B7CC15-E013-42CF-8F76-6BE6114A9473} = {0CD65CD3-A021-4BCA-9836-0F581BEF93FD}
 		{6AFC9A8D-94AA-46D8-B179-5227C4638F5C} = {0CD65CD3-A021-4BCA-9836-0F581BEF93FD}
+		{84D44114-B09A-4DE5-A2E8-29779517E143} = {0CD65CD3-A021-4BCA-9836-0F581BEF93FD}
 	EndGlobalSection
 EndGlobal
