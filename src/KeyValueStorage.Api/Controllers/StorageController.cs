@@ -15,16 +15,16 @@ public sealed class StorageController : ControllerBase
 	}
 
 	[HttpGet("{key}")]
-	public async Task<IActionResult> Get([FromRoute] string key)
+	public IActionResult Get([FromRoute] string key)
 	{
-		return File(await _repository.ProvideData(key), "application/octet-stream");
+		return File(_repository.ProvideData(key), "application/octet-stream");
 	}
 
 	[HttpPost("{key}")]
 	[DisableRequestSizeLimit]
-	public async Task<IActionResult> Post(string key)
+	public async Task<IActionResult> Post(string key, CancellationToken cancellationToken)
 	{
-		var hash = await _repository.StoreData(key, Request.Body);
+		var hash = await _repository.StoreData(key, Request.Body, cancellationToken);
 		return Ok(new { Key = key, Hash = hash });
 	}
 }
