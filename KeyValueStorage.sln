@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{B0B26CF7-BEED-46B5-AE79-D8E4F96F2B1B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyValueStorage.Api", "src\KeyValueStorage.Api\KeyValueStorage.Api.csproj", "{6AA88F34-D56F-4172-B549-374F0F73547C}"
 EndProject
