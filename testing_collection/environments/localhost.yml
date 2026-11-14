@@ -1,0 +1,5 @@
+name: localhost
+variables:
+  - name: baseUrl
+    value: " http://localhost:5010"
+    description: ""

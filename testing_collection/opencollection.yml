@@ -1,0 +1,28 @@
+opencollection: 1.0.0
+
+info:
+  name: BP
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
+    openapi:
+      - sourceUrl: http://localhost:5010/swagger/v1/swagger.json
+        groupBy: tags
+        lastSyncDate: 2026-11-14T10:57:40.250Z
+        specHash: 99512c53018d956fa5bbbfe85db6cde8
+        autoCheck: true
+        autoCheckInterval: 5
