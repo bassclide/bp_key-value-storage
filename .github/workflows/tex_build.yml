@@ -1,0 +1,33 @@
+name: Build TeX
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+  pull_request:
+    paths:
+      - 'docs/**'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build thesis PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          compiler: lualatex
+          args: -interaction=nonstopmode -file-line-error -halt-on-error
+          latexmk_use_lualatex: true
+          working_directory: docs/bachelor-thesis
+      - name: Upload thesis PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: bachelor-thesis
+          path: docs/bachelor-thesis/main.pdf
+          if-no-files-found: error
