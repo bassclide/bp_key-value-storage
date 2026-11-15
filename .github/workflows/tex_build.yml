@@ -21,8 +21,6 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
-          compiler: lualatex
-          args: -interaction=nonstopmode -file-line-error -halt-on-error
           latexmk_use_lualatex: true
           working_directory: docs/bachelor-thesis
       - name: Upload thesis PDF
